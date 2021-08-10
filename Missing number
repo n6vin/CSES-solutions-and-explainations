@@ -1,0 +1,22 @@
+link for the problem: https://cses.fi/problemset/task/1083
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+
+ios::sync_with_stdio(false);
+cin.tie(0);
+long long int n;
+cin>>n;
+vector<long long int >v(n);
+iota(begin(v),end(v),1);
+int i;
+for(int z=1;z<n;z++){
+  cin>>i;
+  v[i-1]=-i;
+}
+sort(v.begin(),v.end(),greater<int>());
+cout<<v[0];
+}
